@@ -5,10 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="style.css">
     <script src="main.js" type="module" defer></script>
 </head>
 
 <body>
+
+    <p class="task-one">Завдання 1</p>
+    <div class="task-one-div">
+        <form id="task-one-form">
+            <br>
+            <input type="text" name="firstname" id="firstname" placeholder="Ім’я:"><br>
+            <br>
+            <input type="password" id="password" placeholder="Пароль:">
+            <button type="button" id="task-one-button">Перевірити</button>
+        </form>
+    </div>
+
+    <p class="task-two">Завдання 2</p>
+   <div class="task-two-div">
+    <form id="task-two-form">
+        <br>
+        <input type="number" id="number1" placeholder="Введіть перше число"><br>
+        <br>
+        <input type="number" id="number2" placeholder="Введіть друге число">
+        <button type="button" id="task-two-button">Сума</button>
+    </form>
+</div>
+
+
+    <p class="task-three">Завдання 3</p>
+    <div class="task-three-div">
+    <form id="task-three-form">
+        <br>
+        <input type="text" id="textInput" placeholder="Введіть текст"><br>
+        <br>
+        <button type="button" id="task-three-button">Перевірити</button>
+    </form>
+</div>
+
+    <p class="task-four">Завдання 4</p>
+    <div class="task-four-div">
+        <form id="task-four-form">
+            <br>
+            <input type="number" id="numberInput" placeholder="Введіть число"><br>
+            <br>
+            <button type="button" id="task-four-button">Перевірити</button>
+        </form>
+    </div>
+
+    <p class="task-five">Завдання 5</p>
+    <div class="task-five-div">
+        <form id="task-five-form">
+            <br>
+            <label for="name">Ім’я:</label>
+            <input type="text" id="name" placeholder="Введіть ім’я"><br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Введіть email"><br>
+            <br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" placeholder="Введіть пароль"><br>
+            <br>
+            <button type="button" id="submit-button">Перевірити</button>
+        </form>
+        <p id="error-message" style="color: red;"></p> <!-- Місце для відображення повідомлення про помилку -->
+    </div>
+    
 </body>
 
 </html>
