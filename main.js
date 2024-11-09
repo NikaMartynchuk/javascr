@@ -39,11 +39,9 @@
 // alert('Операція Завершена!');
 
 document.getElementById('task-one-button').addEventListener('click', function() {
-    // Отримуємо значення з полів
     const firstname = document.getElementById('firstname').value.trim();
     const password = document.getElementById('password').value.trim();
     
-    // Перевірка, чи обидва поля заповнені
     if (firstname && password) {
         alert("Обидва поля заповнені");
     } else {
@@ -53,14 +51,11 @@ document.getElementById('task-one-button').addEventListener('click', function() 
 
 
 document.getElementById('task-two-button').addEventListener('click', function() {
-    // Отримуємо значення з полів і конвертуємо їх у числа
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
     
-    // Обчислюємо суму
     const sum = number1 + number2;
     
-    // Перевірка, чи сума більша за 10
     if (sum > 10) {
         alert("Сума більша за 10");
     } else {
@@ -70,10 +65,8 @@ document.getElementById('task-two-button').addEventListener('click', function() 
 
 
 document.getElementById('task-three-button').addEventListener('click', function() {
-    // Отримуємо значення з текстового поля
     const text = document.getElementById('textInput').value;
     
-    // Перевірка, чи текст містить слово "JavaScript"
     if (text.includes("JavaScript")) {
         alert("Текст містить слово JavaScript");
     } else {
@@ -83,10 +76,8 @@ document.getElementById('task-three-button').addEventListener('click', function(
 
 
 document.getElementById('task-four-button').addEventListener('click', function() {
-    // Отримуємо значення з поля введення і конвертуємо його в число
     const number = parseFloat(document.getElementById('numberInput').value);
     
-    // Перевірка, чи число входить в діапазон від 10 до 20
     if (number > 10 && number < 20) {
         alert("Число входить в діапазон від 10 до 20");
     } else {
@@ -95,12 +86,10 @@ document.getElementById('task-four-button').addEventListener('click', function()
 });
 
 document.getElementById('submit-button').addEventListener('click', function() {
-    // Отримуємо значення з полів
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     
-    // Перевірка, чи правильно заповнені поля
     if (name.length < 3) {
         document.getElementById('error-message').textContent = "Ім’я повинно містити не менше 3 символів.";
     } else if (!email.includes('@') || !email.includes('.')) {
@@ -108,7 +97,6 @@ document.getElementById('submit-button').addEventListener('click', function() {
     } else if (password.length < 6) {
         document.getElementById('error-message').textContent = "Пароль повинен містити не менше 6 символів.";
     } else {
-        // Якщо всі умови виконано, перенаправляємо на іншу сторінку
-        window.location.href = "https://www.example.com";  // Замість цього URL вставте адресу сторінки, на яку хочете перенаправити
+        window.location.href = "https://www.example.com";  
     }
 });
