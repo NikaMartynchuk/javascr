@@ -1,102 +1,161 @@
-// const num = 10;
-// const result = num < 10 && num > 30
-// console.log(result) //false
 
-// const num1 = 50;
-// const result1 = num1 < 10 || num1 > 30
-// console.log(result1) //true
+//Завдання 1
+let list = prompt('Обери "Кава", "Чай" або "Сік"');
+switch (list) {
 
-// if(10 && ''){rgb(217, 217, 217)
-//     console.log(true)
-// } else {
-//     console.log(false)
-// }
+    case 'Кава':
+        alert('Ви обрали каву!')
+        break;
 
 
-// const balance = 1000;
-// let message = (balance >= 1) ? "Ваш баланс почувається добре!" : (balance === 0) ? "Ваш баланс на нулі!" : "Ваш баланс почувається погано!"
-// console.log(message)
+    case 'Чай':
+        alert('Ви обрали чай!')
+        break;
+
+    case 'Сік':
+        alert('Ви обрали сік!')
+        break;
+
+    default:
+        alert('На жаль Ви не обрали нічого')
+}
+
+//Завдання 2
+
+let day = prompt('Введи день тижня');
+switch (day) {
+
+    case 'понеділок':
+        alert('Ви обрали понеділок!')
+        break;
 
 
+    case 'вівторок':
+        alert('Ви обрали вівторок!')
+        break;
 
-// const x1 = 10
-// const x2 = 30
-// const numb = 40
+    case 'середа':
+        alert('Ви обрали середу!')
+        break;
 
-// let res = numb < x1 ? 'до x1' : numb > x2 ? 'після x2' : "від х1 до х2";
-// console.log(res)
+    case 'четвер':
+        alert('Ви обрали четвер!')
+        break;
 
-// let balance = prompt('Введіть свій баланс');
-// let payment = prompt('Введіть суму бажанної покупки');
-// alert("  Загальна вартість замовлення " + payment + " кредитів. Перевіряємо кількість доступних коштів на рахунку ");
-// if (payment <= balance) {
-//     balance - payment;
-//     alert('На рахунку залишилося' + balance + ' кредитів')
-
-// } else {
-//     alert('На рахунку недостатньо коштів для проведення операції!')
-// }
-// alert('Операція Завершена!');
-
-document.getElementById('task-one-button').addEventListener('click', function() {
-    const firstname = document.getElementById('firstname').value.trim();
-    const password = document.getElementById('password').value.trim();
-    
-    if (firstname && password) {
-        alert("Обидва поля заповнені");
-    } else {
-        alert("Не всі поля заповнені");
-    }
-});
+    case 'пятниця':
+        alert('Ви обрали пятницю!')
+        break;
 
 
-document.getElementById('task-two-button').addEventListener('click', function() {
-    const number1 = parseFloat(document.getElementById('number1').value) || 0;
-    const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    
-    const sum = number1 + number2;
-    
-    if (sum > 10) {
-        alert("Сума більша за 10");
-    } else {
-        alert("Сума менша або дорівнює 10");
-    }
-});
+    case 'субота':
+        alert('Ви обрали суботу!')
+        break;
 
 
-document.getElementById('task-three-button').addEventListener('click', function() {
-    const text = document.getElementById('textInput').value;
-    
-    if (text.includes("JavaScript")) {
-        alert("Текст містить слово JavaScript");
-    } else {
-        alert("Текст не містить слово JavaScript");
-    }
-});
+    case 'неділя':
+        alert('Ви обрали неділю!')
+        break;
+
+    default:
+        alert('На жаль Ви не вказали жодного')
+}
 
 
-document.getElementById('task-four-button').addEventListener('click', function() {
-    const number = parseFloat(document.getElementById('numberInput').value);
-    
-    if (number > 10 && number < 20) {
-        alert("Число входить в діапазон від 10 до 20");
-    } else {
-        alert("Число не входить в діапазон від 10 до 20");
-    }
-});
+//Завдання 3
 
-document.getElementById('submit-button').addEventListener('click', function() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    
-    if (name.length < 3) {
-        document.getElementById('error-message').textContent = "Ім’я повинно містити не менше 3 символів.";
-    } else if (!email.includes('@') || !email.includes('.')) {
-        document.getElementById('error-message').textContent = "Email повинен містити символ '@' та крапку.";
-    } else if (password.length < 6) {
-        document.getElementById('error-message').textContent = "Пароль повинен містити не менше 6 символів.";
-    } else {
-        window.location.href = "https://www.example.com";  
-    }
-});
+let month = prompt('Введи номер місяця');
+switch (month) {
+
+    case '12': alert('Зима')
+        break;
+    case '1': alert('Зима')
+        break;
+    case '2': alert('Зима')
+        break;
+
+
+    case '3': alert('Весна')
+        break;
+    case '4': alert('Весна')
+        break;
+    case '5': alert('Весна')
+        break;
+
+    case '6': alert('Літо')
+        break;
+    case '7': alert('Літо')
+        break;
+    case '8': alert('Літо')
+        break;
+
+    case '9': alert('Осінь')
+        break;
+    case '10': alert('Осінь')
+        break;
+    case '11': alert('Осінь')
+        break;
+
+    default:
+        alert("Невірний номер місяця. Введіть число від 1 до 12.")
+        break;
+}
+
+
+//Завдання 4
+
+let MonthDay = prompt('Введи номер місяця');
+switch (month) {
+
+    case '12': alert('31')
+        break;
+    case '1': alert('31')
+        break;
+    case '2': alert('28-29')
+        break;
+
+
+    case '3': alert('31')
+        break;
+    case '4': alert('30')
+        break;
+    case '5': alert('31')
+        break;
+
+    case '6': alert('30')
+        break;
+    case '7': alert('31')
+        break;
+    case '8': alert('31')
+        break;
+
+    case '9': alert('30')
+        break;
+    case '10': alert('31')
+        break;
+    case '11': alert('30')
+        break;
+
+    default:
+        alert("Невірний номер місяця. Введіть число від 1 до 12.")
+        break;
+}
+
+
+//Завдання 5
+
+let color = prompt('Введи колір (червоний, жовтий або зелений)');
+switch (color) {
+
+    case 'червоний': alert('стоп')
+        break;
+    case 'зелений': alert('йти')
+        break;
+    case 'жовтий': alert('чекати')
+        break;
+
+    default:
+        alert("Невірний номер місяця. Введіть число від 1 до 12.")
+        break;
+}
+
+
