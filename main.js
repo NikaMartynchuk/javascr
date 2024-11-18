@@ -22,7 +22,7 @@ switch (list) {
 
 //Завдання 2
 
-let day = prompt('Введи день тижня');
+let day = prompt('Введи день тижня').toLowerCase()
 switch (day) {
 
     case 'понеділок':
@@ -143,7 +143,7 @@ switch (month) {
 
 //Завдання 5
 
-let color = prompt('Введи колір (червоний, жовтий або зелений)');
+let color = prompt('Введи колір (червоний, жовтий або зелений)').toLowerCase();
 switch (color) {
 
     case 'червоний': alert('стоп')
