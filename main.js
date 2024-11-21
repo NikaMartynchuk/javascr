@@ -1,161 +1,77 @@
+//Вивести на екран всі числа від 1 до 10 за допомогою циклу while.
 
-//Завдання 1
-let list = prompt('Обери "Кава", "Чай" або "Сік"');
-switch (list) {
+let num = 1;
 
-    case 'Кава':
-        alert('Ви обрали каву!')
-        break;
-
-
-    case 'Чай':
-        alert('Ви обрали чай!')
-        break;
-
-    case 'Сік':
-        alert('Ви обрали сік!')
-        break;
-
-    default:
-        alert('На жаль Ви не обрали нічого')
+while (num <= 10) {
+    console.log(num);
+    num++;
 }
 
-//Завдання 2
+//Вивести на екран всі парні числа від 2 до 20 за допомогою циклу for. Якщо число не парне, пропустити його за допомогою continue.
 
-let day = prompt('Введи день тижня').toLowerCase()
-switch (day) {
+for (let number = 2; num <= 20; SVGAnimatedNumberList++) {
+    if (number % 2 !== 0) {
+        continue; 
+    }
+    console.log(number); 
+}
 
-    case 'понеділок':
-        alert('Ви обрали понеділок!')
-        break;
+//Вивести на екран таблицю множення числа 7 за допомогою циклу for.
 
+const Number = 7; 
 
-    case 'вівторок':
-        alert('Ви обрали вівторок!')
-        break;
+for (let i = 1; i <= 10; i++) {
+    console.log(`${Number} x ${i} = ${Number * i}`);
+}
 
-    case 'середа':
-        alert('Ви обрали середу!')
-        break;
+//Створити масив з числами від 1 до 5. Вивести на екран кожен елемент масиву за допомогою циклу while.
 
-    case 'четвер':
-        alert('Ви обрали четвер!')
-        break;
+const numbers = [1, 2, 3, 4, 5];
 
-    case 'пятниця':
-        alert('Ви обрали пятницю!')
-        break;
+let i = 0;
 
-
-    case 'субота':
-        alert('Ви обрали суботу!')
-        break;
-
-
-    case 'неділя':
-        alert('Ви обрали неділю!')
-        break;
-
-    default:
-        alert('На жаль Ви не вказали жодного')
+while (i < numbers.length) {
+    console.log(numbers[i]);
+    i++;
 }
 
 
-//Завдання 3
-
-let month = prompt('Введи номер місяця');
-switch (month) {
-
-    case '12': alert('Зима')
-        break;
-    case '1': alert('Зима')
-        break;
-    case '2': alert('Зима')
-        break;
+//Створити масив із числами від 1 до 10. За допомогою циклу for пройтися по масиву та вивести на екран всі числа, крім числа 7. Якщо зустрінете число 7, закінчити виконання циклу за допомогою оператора break.
 
 
-    case '3': alert('Весна')
-        break;
-    case '4': alert('Весна')
-        break;
-    case '5': alert('Весна')
-        break;
+const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    case '6': alert('Літо')
-        break;
-    case '7': alert('Літо')
-        break;
-    case '8': alert('Літо')
-        break;
-
-    case '9': alert('Осінь')
-        break;
-    case '10': alert('Осінь')
-        break;
-    case '11': alert('Осінь')
-        break;
-
-    default:
-        alert("Невірний номер місяця. Введіть число від 1 до 12.")
-        break;
+for (let i = 0; i < Numbers.length; i++) {
+    if (Numbers[i] === 7) {
+        break; 
+    }
+    console.log(Numbers[i]); 
 }
 
 
-//Завдання 4
+//Створити скрипт, який виводить на екран всі числа, які менші за n. Якщо зустрічається число, що більше або дорівнює n, цикл повинен бути закінчений за допомогою break.
 
-let MonthDay = prompt('Введи номер місяця');
-switch (month) {
+const n = 7;
 
-    case '12': alert('31')
-        break;
-    case '1': alert('31')
-        break;
-    case '2': alert('28-29')
-        break;
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-
-    case '3': alert('31')
-        break;
-    case '4': alert('30')
-        break;
-    case '5': alert('31')
-        break;
-
-    case '6': alert('30')
-        break;
-    case '7': alert('31')
-        break;
-    case '8': alert('31')
-        break;
-
-    case '9': alert('30')
-        break;
-    case '10': alert('31')
-        break;
-    case '11': alert('30')
-        break;
-
-    default:
-        alert("Невірний номер місяця. Введіть число від 1 до 12.")
-        break;
+for (let i = 0; i < numbers1.length; i++) {
+    if (numbers1[i] >= n) {
+        break; 
+    }
+    console.log(numbers1[i]); 
 }
 
 
-//Завдання 5
+//За допомогою циклу while вивести на екран всі числа від 1 до 20, крім чисел, кратних 3. Якщо зустрінете число, кратне 3, цикл повинен продовжити виконання за допомогою оператора continue.
 
-let color = prompt('Введи колір (червоний, жовтий або зелений)').toLowerCase();
-switch (color) {
+let numb = 1;
 
-    case 'червоний': alert('стоп')
-        break;
-    case 'зелений': alert('йти')
-        break;
-    case 'жовтий': alert('чекати')
-        break;
-
-    default:
-        alert("Невірний номер місяця. Введіть число від 1 до 12.")
-        break;
+while (numb <= 20) {
+    if (numb % 3 === 0) {
+        numb++; 
+        continue; 
+    }
+    console.log(numb); 
+    numb++;
 }
-
-
