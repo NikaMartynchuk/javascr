@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Зміна елементів через JavaScript</title>
-    <script src="main.js" defer></script> 
+    <title>Document</title>
+    <script src="main.js" defer></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 1 -->
-    <input type="text" id="textField" placeholder="Введіть текст">
-    <button id="changeButton">Змінити текст</button>
-  
-    <!-- 2 -->
+    <!DOCTYPE html>
+    <html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Галерея та Генерація блоків</title>
+       
 
-    <h1>Заголовок</h1>
-    <img id="image" src="w-338.jpg" alt="Старе зображення">
-
-    <!-- 3 -->
-
-    <a id="link" href="index.html">Перейти до старої сторінки</a>
-    <img id="image" src="w-338.jpg" width="610px" alt="Старе зображення">
-
-        <!-- 4 -->
-
-    <ul>
-        <li>Перший елемент</li>
-        <li>Другий елемент</li>
-        <li>Третій елемент</li>
-    </ul>
-</body>
+    </head>
+    <body>
+    
+        <!-- Галерея -->
+        <div class="gallery-container">
+            <ul class="gallery">
+                <li><img src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/11815778/pexels-photo-11815778.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/6195166/pexels-photo-6195166.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/6957926/pexels-photo-6957926.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/15520825/pexels-photo-15520825.jpeg" alt="Зображення"></li>
+            </ul>
+        </div>
+    
+        <!-- Генерація блоків -->
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" id="input-number" />
+            <button type="button" id="create-btn">Створити</button>
+            <button type="button" id="destroy-btn">Очистити</button>
+        </div>
+        <div id="boxes"></div>
+    
+    
+    </body>
+    </html>
+    
 </html>
