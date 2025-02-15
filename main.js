@@ -28,7 +28,7 @@
 //             textElement.style.fontSize = currentFontSize + "px";
 //         });
 
-    // Галерея зображень
+    // 1
     let index = 0;
     const images = document.querySelectorAll(".gallery img");
 
@@ -47,7 +47,7 @@
         }
     });
 
-    // Генерація блоків
+    // 2
     const input = document.getElementById("input-number");
     const createBtn = document.getElementById("create-btn");
     const destroyBtn = document.getElementById("destroy-btn");
