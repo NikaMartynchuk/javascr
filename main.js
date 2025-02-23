@@ -1,67 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const openModalBtn = document.querySelector("[data-action='open-modal']");
-    const closeModalBtn = document.querySelector("[data-action='close-modal']");
-    const backdrop = document.querySelector(".backdrop");
-    const body = document.body;
+let index = 0;
+const images = document.querySelectorAll(".gallery img");
+function showImage(idx) {
+    images.forEach(img => img.style.transform = `translateX(-${idx * 320}px)`);
+}
 
-    openModalBtn.addEventListener("click", function () {
-        body.classList.add("show-modal");
-    });
-
-    closeModalBtn.addEventListener("click", function () {
-        body.classList.remove("show-modal");
-    });
-
-    backdrop.addEventListener("click", function (event) {
-        if (event.target === backdrop) {
-            body.classList.remove("show-modal");
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            body.classList.remove("show-modal");
-        }
-    });
-});
-
-
-// 3
-document.querySelectorAll('input[name="color"]').forEach(input => {
-    input.addEventListener("change", function () {
-        document.body.style.backgroundColor = this.value;
-    });
-});
-
-
-// 4
-const nameInput = document.getElementById("name-input");
-const nameOutput = document.getElementById("name-output");
-
-nameInput.addEventListener("input", function () {
-    nameOutput.textContent = this.value.trim() || "Незнайомець";
-});
-
-
-// 5
-const validationInput = document.getElementById("validation-input");
-
-validationInput.addEventListener("blur", function () {
-    const expectedLength = Number(this.dataset.length);
-    if (this.value.length === expectedLength) {
-        this.classList.add("valid");
-        this.classList.remove("invalid");
-    } else {
-        this.classList.add("invalid");
-        this.classList.remove("valid");
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        index = (index + 1) % images.length;
+        showImage(index);
+    }
+    if (event.key === "ArrowLeft") {
+        index = (index - 1 + images.length) % images.length;
+        showImage(index);
     }
 });
 
+   // 2
+   const input = document.getElementById("input-number");
+   const createBtn = document.getElementById("create-btn");
+   const destroyBtn = document.getElementById("destroy-btn");
+   const boxesContainer = document.getElementById("boxes");
+   function getRandomColor() {
+    return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+}
 
-// 6
-const fontSizeControl = document.getElementById("font-size-control");
-const text = document.getElementById("text");
+function createBoxes(amount) {
+    boxesContainer.innerHTML = "";
+    let size = 30;
+    for (let i = 0; i < amount; i++) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.style.width = `${size}px`;
+        box.style.height = `${size}px`;
+        box.style.backgroundColor = getRandomColor();
+        box.textContent = i + 1;
+        boxesContainer.appendChild(box);
+        size += 10;
+    }
+    function destroyBoxes() {
+        boxesContainer.innerHTML = "";
+    }
 
-fontSizeControl.addEventListener("input", function () {
-    text.style.fontSize = this.value + "px";
-});
+    createBtn.addEventListener("click", () => {
+        const amount = Number(input.value);
+        if (amount > 0) {
+            createBoxes(amount);
+        }
+    })
+    destroyBtn.addEventListener("click", destroyBoxes);}

@@ -9,72 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!DOCTYPE html>
-    <html lang="uk">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Галерея та Генерація блоків</title>
-
-
-    </head>
 
     <body>
-
-        <!-- 1 2-->
-        <button class="button" data-action="open-modal">Відкрити модалку</button>
-
-        <div class="backdrop js-backdrop">
-            <div class="modal">
-                <h2>Modal window</h2>
-                <p>
-                    In user interface design for computer applications, a modal window is
-                    a graphical control element subordinate to an application's main
-                    window. It creates a mode that disables the main window but keeps it
-                    visible, with the modal window as a child window in front of it. Users
-                    must interact with the modal window before they can return to the
-                    parent application. This avoids interrupting the workflow on the main
-                    window. Modal windows are sometimes called heavy windows or modal
-                    dialogs because they often display a dialog box.
-                </p>
-                <button type="button" class="button" data-action="close-modal">
-                    Закрити
-                </button>
-            </div>
+        
+        <!-- 1 -->
+        <div class="gallery-container">
+            <ul class="gallery">
+                <li><img src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/11815778/pexels-photo-11815778.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/6195166/pexels-photo-6195166.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/6957926/pexels-photo-6957926.jpeg" alt="Зображення"></li>
+                <li><img src="https://images.pexels.com/photos/15520825/pexels-photo-15520825.jpeg" alt="Зображення"></li>
+            </ul>
         </div>
-
-        <!-- 3 -->
-        <form>
-            <p>Choose a color:</p>
-            <label>
-                <input type="radio" name="color" value="red" checked /> Red
-            </label>
-            <label>
-                <input type="radio" name="color" value="white" /> White
-            </label>
-            <label>
-                <input type="radio" name="color" value="green" /> Green
-            </label>
-        </form>
-
-
-        <!-- 4 -->
-
-        <input type="text" placeholder="Ваше ім'я?" id="name-input">
-        <h1>Привіт, <span id="name-output">Незнайомець</span>!</h1>
-
-        <!-- 5 -->
-        <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символів">
-
-        <!-- 6 -->
-        <input id="font-size-control" type="range" min="10" max="100" value="16">
-        <br />
-        <span id="text">Абракадабра!</span>
+    
+        <!-- 2 -->
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" id="input-number" />
+            <button type="button" id="create-btn">Створити</button>
+            <button type="button" id="destroy-btn">Очистити</button>
 
     </body>
 
     </html>
 
-</html>
