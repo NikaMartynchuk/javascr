@@ -1,50 +1,21 @@
-let index = 0;
-const images = document.querySelectorAll(".gallery img");
-function showImage(idx) {
-    images.forEach(img => img.style.transform = `translateX(-${idx * 320}px)`);
-}
+// 1
+const slider = document.querySelector('.slider__input');
+const image = document.querySelector('.slider__image');
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowRight") {
-        index = (index + 1) % images.length;
-        showImage(index);
-    }
-    if (event.key === "ArrowLeft") {
-        index = (index - 1 + images.length) % images.length;
-        showImage(index);
-    }
+const resizeImage = _.debounce((value) => {
+  image.style.width = `${value}px`;
+}, 100);
+
+slider.addEventListener('input', (e) => {
+  resizeImage(e.target.value);
 });
 
-   // 2
-   const input = document.getElementById("input-number");
-   const createBtn = document.getElementById("create-btn");
-   const destroyBtn = document.getElementById("destroy-btn");
-   const boxesContainer = document.getElementById("boxes");
-   function getRandomColor() {
-    return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-}
+//  2
+const box = document.getElementById('box');
 
-function createBoxes(amount) {
-    boxesContainer.innerHTML = "";
-    let size = 30;
-    for (let i = 0; i < amount; i++) {
-        const box = document.createElement("div");
-        box.classList.add("box");
-        box.style.width = `${size}px`;
-        box.style.height = `${size}px`;
-        box.style.backgroundColor = getRandomColor();
-        box.textContent = i + 1;
-        boxesContainer.appendChild(box);
-        size += 10;
-    }
-    function destroyBoxes() {
-        boxesContainer.innerHTML = "";
-    }
+const moveBox = _.debounce((event) => {
+  box.style.left = `${event.clientX}px`;
+  box.style.top = `${event.clientY}px`;
+}, 100);
 
-    createBtn.addEventListener("click", () => {
-        const amount = Number(input.value);
-        if (amount > 0) {
-            createBoxes(amount);
-        }
-    })
-    destroyBtn.addEventListener("click", destroyBoxes);}
+document.addEventListener('mousemove', moveBox);
